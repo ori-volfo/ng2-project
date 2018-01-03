@@ -13,5 +13,6 @@ export class TaskManagerService {
   }
   setTasks(list) {
     localStorage.setItem('tasksList', JSON.stringify(list));
+
   }
 }

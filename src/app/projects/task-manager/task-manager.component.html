@@ -20,6 +20,9 @@
       </ul>
     </div>
     <button class="btn btn-success save-btn" (click)="saveTasks(tasks)">Save</button>
+    <div class="alert alert-success" [hidden]="!alert">
+      <strong>Tasks saved!</strong>
+    </div>
   </div>
 
 

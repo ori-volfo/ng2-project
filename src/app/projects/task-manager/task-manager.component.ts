@@ -10,7 +10,9 @@ import {TaskManagerService} from '../../services/task-manager.service';
 export class TaskManagerComponent implements OnInit {
   tasks;
   newTask = false;
+  alert = false;
   textInput  = '';
+
   constructor(private _taskManagerService: TaskManagerService) {
     this.tasks = _taskManagerService.getTasks();
   }
@@ -33,5 +35,9 @@ export class TaskManagerComponent implements OnInit {
 
   saveTasks(list) {
     this._taskManagerService.setTasks(list);
+    this.alert = true;
+    setTimeout(() => {
+      this.alert = false;
+    }, 3000);
   }
 }
