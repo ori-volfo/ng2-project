@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class TaskManagerService {
   tasks;
   constructor() {
-    this.tasks = [{title: 'Learn angular 2', done: false},
+    this.tasks = JSON.parse(localStorage.getItem('tasksList')) || [{title: 'Learn angular 2', done: false},
       {title: 'build Todo app', done: true}];
   }
 
@@ -12,6 +12,6 @@ export class TaskManagerService {
     return this.tasks;
   }
   setTasks(list) {
-    //TODO: cache tasks
+    localStorage.setItem('tasksList', JSON.stringify(list));
   }
 }
