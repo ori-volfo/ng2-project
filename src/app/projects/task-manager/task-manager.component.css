@@ -42,3 +42,7 @@ li .new-task button{
   right: 7px;
   height: 33px;
 }
+
+button.save-btn{
+  margin: 15px;
+}

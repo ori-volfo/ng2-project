@@ -12,13 +12,14 @@
           <div class="glyphicon glyphicon-plus" (click)="openTask()"></div>
           <div class="title" [hidden]="newTask">Add new task</div>
           <div [hidden]="!newTask" class="new-task">
-            <input type="text" class="new-task-input" [hidden]="!newTask" #textInput >
-            <button class="btn btn-success" (click)="addTask(textInput.value)">Ok</button>
+            <input type="text" class="new-task-input" [hidden]="!newTask" [(ngModel)]="textInput" >
+            <button class="btn btn-success" (click)="addTask()">Ok</button>
           </div>
 
         </li>
       </ul>
     </div>
+    <button class="btn btn-success save-btn" (click)="saveTasks(tasks)">Save</button>
   </div>
 
 
