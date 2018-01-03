@@ -10,6 +10,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { TaskManagerComponent } from './projects/task-manager/task-manager.component';
 import { AboutComponent } from './about/about.component';
 import { TaskManagerService } from './services/task-manager.service';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { TaskManagerService } from './services/task-manager.service';
     NavbarComponent,
     ProjectsComponent,
     TaskManagerComponent,
-    AboutComponent
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
