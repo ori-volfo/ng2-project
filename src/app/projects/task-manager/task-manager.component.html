@@ -1,3 +1,26 @@
-<p>
-  task-manager works!
-</p>
+<div>
+  <div class="panel panel-default">
+    <div class="panel-heading">ToDo List:</div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let task of tasks">
+          <input type="checkbox" [checked]="task.done" (change)="task.done = !task.done">
+          <div class="title" [class.done]="task.done">{{task.title}}</div>
+          <div class="glyphicon glyphicon-remove" (click)="removeTask(task)"></div>
+        </li>
+        <li class="list-group-item">
+          <div class="glyphicon glyphicon-plus" (click)="openTask()"></div>
+          <div class="title" [hidden]="newTask">Add new task</div>
+          <div [hidden]="!newTask" class="new-task">
+            <input type="text" class="new-task-input" [hidden]="!newTask" #textInput >
+            <button class="btn btn-success" (click)="addTask(textInput.value)">Ok</button>
+          </div>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+
+</div>

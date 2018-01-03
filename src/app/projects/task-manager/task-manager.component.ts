@@ -6,10 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./task-manager.component.css']
 })
 export class TaskManagerComponent implements OnInit {
-
-  constructor() { }
+  tasks;
+  newTask = false;
+  constructor() {
+    this.tasks = [
+      {title: 'learn angular', done: false},
+      {title: 'build website', done: true}
+    ];
+  }
 
   ngOnInit() {
   }
 
+  openTask(){
+    this.newTask = true;
+  }
+  addTask(task) {
+    this.tasks.push({title: task, done: false});
+  }
+
+  removeTask(task) {
+    this.tasks.splice(this.tasks.indexOf(task), 1);
+  }
 }

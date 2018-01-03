@@ -1,0 +1,44 @@
+ul {
+  padding: 3px;
+}
+li {
+  padding: 8px 0;
+  list-style: none;
+  margin: 15px 0;
+}
+li div.done{
+  text-decoration: line-through;
+}
+.panel{
+  max-width: 450px;
+}
+div.title{
+  padding: 10px;
+  display: inline;
+}
+li input[type=checkbox], li div.glyphicon{
+  margin-left: 10px;
+  display: inline;
+  cursor: pointer;
+}
+li div.glyphicon-remove{
+  float: right;
+  margin: 3px 10px 0 0;
+  cursor: pointer;
+}
+li div.new-task{
+  display: inline;
+}
+[hidden] {
+  display: none !important;
+}
+li .new-task-input{
+  margin-left: 10px;
+  width: 75%;
+}
+li .new-task button{
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  height: 33px;
+}
